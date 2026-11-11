@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Test repo for the AWS Health readiness analysis. Not meant to be deployed.
+
+Resources:
+  HealthTestFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: health-test-python3-9
+      Runtime: python3.9
+      Handler: app.handler
+      CodeUri: src/
+      MemorySize: 128
+      Timeout: 10
